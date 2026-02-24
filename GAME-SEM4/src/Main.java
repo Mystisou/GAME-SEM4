@@ -8,6 +8,8 @@ public class Main {
 		System.out.println("push test by abdo");
 		System.out.println("another 1");
 		System.out.println("another 1");
+		
+		System.out.println("HEMO");
 	}
 
 }
