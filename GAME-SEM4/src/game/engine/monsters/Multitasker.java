@@ -3,7 +3,7 @@ import game.engine.Role;
 
 public class Multitasker extends Monster {
 	
-	// READ & WRITE
+	
     private int normalSpeedTurns;
     
     public Multitasker(String name, String description, Role role, int energy) {

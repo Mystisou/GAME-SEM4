@@ -4,6 +4,6 @@ public class ConveyorBelt extends TransportCell {
 
     public ConveyorBelt(String name, int effect) {
         super(name, Math.abs(effect)); 
-        // Ensures effect is always positive
+        // effect is always positive
     }
 }

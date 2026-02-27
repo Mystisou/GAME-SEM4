@@ -4,6 +4,6 @@ public class ContaminationSock extends TransportCell {
 
     public ContaminationSock(String name, int effect) {
         super(name, -Math.abs(effect)); 
-        // Ensures effect is always negative
+        //effect is always negative
     }
 }
