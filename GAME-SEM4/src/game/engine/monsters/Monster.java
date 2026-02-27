@@ -27,7 +27,7 @@ public abstract class Monster implements Comparable {
 	        this.shielded = false;
 	        this.confusionTurns = 0;
 	    }
-
+	    
 	    public int compareTo(Monster o) {
 	        return this.position - o.position;
 	    }
