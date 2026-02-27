@@ -23,4 +23,3 @@ public class Cell {
         this.monster = monster;
     }
 }
-

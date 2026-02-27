@@ -1,6 +1,6 @@
 package game.engine.monsters;
 import game.engine.Role;
-public abstract class Monster implements Comparable {
+public abstract class Monster implements Comparable<Monster>{
 
 	    // read only
 	    private final String name;
@@ -27,7 +27,6 @@ public abstract class Monster implements Comparable {
 	        this.shielded = false;
 	        this.confusionTurns = 0;
 	    }
-
 	    public int compareTo(Monster o) {
 	        return this.position - o.position;
 	    }
@@ -106,3 +105,4 @@ public abstract class Monster implements Comparable {
 	            this.confusionTurns = confusionTurns;
 	    }
 }
+
