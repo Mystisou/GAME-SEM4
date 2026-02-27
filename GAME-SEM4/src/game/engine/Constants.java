@@ -15,18 +15,18 @@ public final class Constants {
     public static final int[] SOCK_CELL_INDICES = {32, 42, 74, 84, 98};    
     public static final int[] CARD_CELL_INDICES = {4, 12, 28, 36, 48, 56, 60, 76, 86, 90};
     
-    //Energy constants:
+    // Energy constants:
     public static final int WINNING_ENERGY = 1000;
     public static final int MIN_ENERGY = 0 ;
     	
     	
-    //Monster constants:
+    // Monster constants:
     public static final int MULTITASKER_BONUS = 200;
     public static final int SCHEMER_STEAL = 10;
     
-    //Cell constants:
+    // Cell constants:
     public static final int SLIP_PENALTY = 100;
     	
-    //Power constants:
+    // Power constants:
     public static final int POWERUP_COST = 500;
 }
