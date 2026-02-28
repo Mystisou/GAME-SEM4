@@ -2,6 +2,7 @@ package game.engine.cells;
 import game.engine.Role;
 
 public class DoorCell extends Cell{
+	
 	private final Role role;
 	private final int energy;
 	private boolean activated;
