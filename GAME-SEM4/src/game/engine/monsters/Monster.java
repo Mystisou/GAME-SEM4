@@ -29,7 +29,7 @@ public abstract class Monster implements Comparable<Monster> {
         this.confusionTurns = 0;
     }
 
-    @Override
+    
     public int compareTo(Monster o) {
         return this.position - o.position;
     }
