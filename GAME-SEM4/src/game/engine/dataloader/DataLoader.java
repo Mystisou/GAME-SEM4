@@ -109,7 +109,7 @@ public class DataLoader {
 		 
 		 String line;
 		 while((line = bufferedReader.readLine()) != null) {
-			 String [] data = line.split("\t");
+			 String [] data = line.split(",");
 			 
 			 try {
 				 String type = data[0];

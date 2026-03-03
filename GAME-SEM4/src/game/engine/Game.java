@@ -1,10 +1,10 @@
 package game.engine;
+
 import java.io.IOException;
 import java.util.ArrayList;
 
 import game.engine.dataloader.DataLoader;
 import game.engine.monsters.Monster;
-import game.engine.dataloader.*;
 
 public class Game {
 	
@@ -21,26 +21,25 @@ public class Game {
 		
 		Role opponentRole;
 		if(playerRole == Role.SCARER) 
-			opponentRole = Role.LAUGHER;
+			opponentRole = Role.LAUGHER ;
 		else
-			opponentRole = Role.SCARER;
+			opponentRole = Role.SCARER  ;
 		
 		this.opponent = selectRandomMonsterByRole(opponentRole);
 		this.current = this.player;
 	}
 	
 	private Monster selectRandomMonsterByRole(Role role) {
-	    ArrayList<Monster> matchingMonsters = new ArrayList<Monster>();
+	    ArrayList<Monster> Monsters_of_same_role = new ArrayList<Monster>();
 	    
-	    for (int i = 0; i < allMonsters.size(); i++) {
+	    for (int i = 0; i < allMonsters.size(); i++){
 	        Monster m = allMonsters.get(i);
-	        if (m.getOriginalRole() == role) {
-	            matchingMonsters.add(m);
-	        }
+	        if (m.getOriginalRole() == role)
+	        	Monsters_of_same_role.add(m);	   
 	    }
 	    
-	    int randomIndex = (int) (Math.random() * matchingMonsters.size());
-	    return matchingMonsters.get(randomIndex);
+	    int random_index = (int) (Math.random()*Monsters_of_same_role.size());
+	    return Monsters_of_same_role.get(random_index);
 	}
 	
 	
