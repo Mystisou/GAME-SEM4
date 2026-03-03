@@ -30,7 +30,7 @@ public class DataLoader {
             int rarity = Integer.parseInt(data[3]);
 	             
 	        switch(type) {
-	            case "SWAPPER": 
+	             case "SWAPPER": 
 	            	cards.add(new SwapperCard(name, description, rarity));
 	             	break;
 	             
