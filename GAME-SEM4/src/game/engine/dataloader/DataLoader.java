@@ -104,7 +104,7 @@ public class DataLoader {
 		     String description = data[2];
 	         Role role = Role.valueOf(data[3]);
 	         int energy = Integer.parseInt(data[4]);
-		         
+		          
 		     switch(type) {
 		         case "DYNAMO":
 		        	 monsters.add(new Dynamo(name, description, role, energy));
