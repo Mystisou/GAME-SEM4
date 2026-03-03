@@ -23,7 +23,6 @@ public class Board {
 	        return boardCells;
 	  }
 	  
-	  //////////////////////////////////
 	  
 	  public static ArrayList<Monster> getStationedMonsters() {
 	        return stationedMonsters;
@@ -33,13 +32,11 @@ public class Board {
 	        stationedMonsters = monsters;
 	  }
 
-	  ////////////////////////////////
 	  
 	  public static ArrayList<Card> getOriginalCards() {
 	        return originalCards;
 	  }
 
-	  ///////////////////////////////
 	  
 	  public static ArrayList<Card> getCards() {
 	        return cards;

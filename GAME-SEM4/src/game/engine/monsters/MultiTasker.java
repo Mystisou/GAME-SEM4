@@ -1,12 +1,12 @@
 package game.engine.monsters;
 import game.engine.Role;
 
-public class Multitasker extends Monster {
+public class MultiTasker extends Monster {
 	
 	
     private int normalSpeedTurns;
     
-    public Multitasker(String name, String description, Role role, int energy) {
+    public MultiTasker(String name, String description, Role role, int energy) {
         super(name, description, role, energy);
         this.normalSpeedTurns = 0;
     }

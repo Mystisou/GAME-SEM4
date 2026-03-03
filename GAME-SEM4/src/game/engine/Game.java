@@ -1,12 +1,13 @@
 package game.engine;
-
 import java.io.IOException;
 import java.util.ArrayList;
 
 import game.engine.dataloader.DataLoader;
 import game.engine.monsters.Monster;
+import game.engine.dataloader.*;
 
 public class Game {
+	
 	private final Board board;
 	private final ArrayList<Monster> allMonsters;
 	private final Monster player;
@@ -25,7 +26,6 @@ public class Game {
 			opponentRole = Role.SCARER;
 		
 		this.opponent = selectRandomMonsterByRole(opponentRole);
-		
 		this.current = this.player;
 	}
 	
@@ -38,6 +38,7 @@ public class Game {
 	            matchingMonsters.add(m);
 	        }
 	    }
+	    
 	    int randomIndex = (int) (Math.random() * matchingMonsters.size());
 	    return matchingMonsters.get(randomIndex);
 	}
@@ -46,9 +47,11 @@ public class Game {
 		public Board getBoard() {
 			return board;
 		}
+		
 		public ArrayList<Monster> getAllMonsters(){
 			return allMonsters;
 		}
+		
 		public Monster getPlayer() {
 	        return player;
 	    }
