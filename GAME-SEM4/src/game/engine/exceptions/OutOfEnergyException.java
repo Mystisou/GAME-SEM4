@@ -16,3 +16,4 @@ public class OutOfEnergyException extends GameActionException{
          super(message);
     }
 }}
+}
