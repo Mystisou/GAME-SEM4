@@ -1,4 +1,5 @@
 package game.engine.cells;
+import java.util.ArrayList;
 import java.util.Iterator;
 
 import game.engine.Role;
