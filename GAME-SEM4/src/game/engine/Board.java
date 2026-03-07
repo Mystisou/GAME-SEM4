@@ -10,7 +10,7 @@ public class Board {
 	 private final Cell [][] boardCells ;
 	 private static ArrayList<Monster> stationedMonsters;  // read w write 
 	 private static ArrayList<Card> originalCards ;// can't do final to be able to assign in constructor
-	 private static ArrayList<Card> cards ;                // read w write brdo
+	 public static ArrayList<Card> cards ;                // read w write brdo
 	 
 	 public Board(ArrayList<Card> readCards){
 		 boardCells = new Cell[Constants.BOARD_ROWS][Constants.BOARD_COLS];

@@ -1,7 +1,11 @@
 package game.engine.cells;
-import game.engine.Role;
+import java.util.Iterator;
 
-public class DoorCell extends Cell{
+import game.engine.Role;
+import game.engine.interfaces.CanisterModifier;
+import game.engine.monsters.Monster;
+import game.engine.Board;
+public class DoorCell extends Cell implements CanisterModifier{
 	
 	private final Role role;
 	private final int energy;
@@ -28,5 +32,27 @@ public class DoorCell extends Cell{
 	
 	public void setActivated(boolean activated) {
 		this.activated = activated;
+	}
+	
+	// still unsolved
+	public void modifyEnergy(Monster monster) {
+      /*if(!this.isActivated()) {
+		if(monster.getRole()==this.getRole()) {
+			for(int i=0;i<Board.stationedMonsters.size();i++) {
+				if(Board.stationedMonsters.get(i).getRole()==this.getRole())
+			        monster.setEnergy(monster.getEnergy()+this.energy);
+			}
+			this.setActivated(true);
+		}
+		else {
+		    if(!monster.isShielded()) {
+		    	for(int i=0;i<Board.stationedMonsters.size();i++) {
+					if(Board.stationedMonsters.get(i).getRole()!=this.getRole())
+				        monster.setEnergy(monster.getEnergy()-this.energy);
+				}
+			   this.setActivated(true);
+			}
+		}
+	  }*/
 	}
 }
