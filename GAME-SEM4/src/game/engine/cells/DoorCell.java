@@ -36,23 +36,27 @@ public class DoorCell extends Cell implements CanisterModifier{
 	
 	// still unsolved
 	public void modifyEnergy(Monster monster) {
-      /*if(!this.isActivated()) {
+      if(!this.isActivated()) {
 		if(monster.getRole()==this.getRole()) {
-			for(int i=0;i<Board.stationedMonsters.size();i++) {
-				if(Board.stationedMonsters.get(i).getRole()==this.getRole())
-			        monster.setEnergy(monster.getEnergy()+this.energy);
+		    ArrayList<Monster>matching = Board.getStationedMonsters();
+			for(int i=0;i<matching.size();i++) {
+				if(matching.get(i).getRole()==monster.getRole())
+			        matching.get(i).setEnergy(matching.get(i).getEnergy()+this.energy);
 			}
+			//Board.setStationedMonsters(matching);
 			this.setActivated(true);
 		}
 		else {
 		    if(!monster.isShielded()) {
-		    	for(int i=0;i<Board.stationedMonsters.size();i++) {
-					if(Board.stationedMonsters.get(i).getRole()!=this.getRole())
-				        monster.setEnergy(monster.getEnergy()-this.energy);
-				}
-			   this.setActivated(true);
+		    	ArrayList<Monster>matching = Board.getStationedMonsters();
+			for(int i=0;i<matching.size();i++) {
+				if(matching.get(i).getRole()==monster.getRole())
+			        matching.get(i).setEnergy(matching.get(i).getEnergy()-this.energy);
+			}
+			//Board.setStationedMonsters(matching);
+			this.setActivated(true);
 			}
 		}
-	  }*/
+	  }
 	}
 }
