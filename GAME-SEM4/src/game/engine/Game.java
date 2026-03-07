@@ -34,7 +34,7 @@ public class Game {
 	    
 	    for (int i = 0; i < allMonsters.size(); i++){
 	        Monster m = allMonsters.get(i);
-	        if (m.getOriginalRole() == role)
+	        if (m.getRole() == role)
 	        	Monsters_of_same_role.add(m);	   
 	    }
 	    
