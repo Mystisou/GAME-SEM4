@@ -6,6 +6,7 @@ import game.engine.Role;
 import game.engine.interfaces.CanisterModifier;
 import game.engine.monsters.Monster;
 import game.engine.Board;
+
 public class DoorCell extends Cell implements CanisterModifier{
 	
 	private final Role role;
@@ -38,21 +39,21 @@ public class DoorCell extends Cell implements CanisterModifier{
 	// still unsolved
 	public void modifyEnergy(Monster monster) {
       if(!this.isActivated()) {
-		if(monster.getRole()==this.getRole()) {
-		    ArrayList<Monster>matching = Board.getStationedMonsters();
-			for(int i=0;i<matching.size();i++) {
-				if(matching.get(i).getRole()==monster.getRole())
-			        matching.get(i).setEnergy(matching.get(i).getEnergy()+this.energy);
+		if(monster.getRole() == this.getRole()) {
+		    ArrayList<Monster> matching = Board.getStationedMonsters();
+			for(int i = 0; i < matching.size(); i++) {
+				if(matching.get(i).getRole() == monster.getRole())
+			        matching.get(i).setEnergy(matching.get(i).getEnergy() + this.energy);
 			}
 			//Board.setStationedMonsters(matching);
 			this.setActivated(true);
 		}
 		else {
 		    if(!monster.isShielded()) {
-		    	ArrayList<Monster>matching = Board.getStationedMonsters();
-			for(int i=0;i<matching.size();i++) {
-				if(matching.get(i).getRole()==monster.getRole())
-			        matching.get(i).setEnergy(matching.get(i).getEnergy()-this.energy);
+		    	ArrayList<Monster> matching = Board.getStationedMonsters();
+			for(int i = 0; i < matching.size(); i++) {
+				if(matching.get(i).getRole() == monster.getRole())
+			        matching.get(i).setEnergy(matching.get(i).getEnergy() - this.energy);
 			}
 			//Board.setStationedMonsters(matching);
 			this.setActivated(true);
