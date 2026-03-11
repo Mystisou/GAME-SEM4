@@ -56,6 +56,7 @@ public class DataLoader {
 	             default : throw new InvalidCSVFormat(line);
 	             }
 		}
+		 
 		 bufferedReader.close();
 		 return cards;
 	 }
