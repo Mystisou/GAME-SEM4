@@ -14,7 +14,7 @@ public class Game {
 	private final Monster opponent;
 	private Monster current;
 	
-	public Game(Role playerRole) throws IOException{
+	public Game(Role playerRole) throws IOException {
 		this.board = new Board(DataLoader.readCards());
 		this.allMonsters = DataLoader.readMonsters();
 		this.player = selectRandomMonsterByRole(playerRole);
