@@ -28,8 +28,8 @@ public class Board {
 	        return stationedMonsters;
 	  }
 
-	  public static void setStationedMonsters(ArrayList<Monster> monsters) {
-	        stationedMonsters = monsters;
+	  public static void setStationedMonsters(ArrayList<Monster> stationedMonsters) {
+	        Board.stationedMonsters = stationedMonsters;
 	  }
 
 	  
@@ -42,7 +42,7 @@ public class Board {
 	        return cards;
 	  }
 
-	   public static void setCards(ArrayList<Card> newCards) {
-	        cards = newCards;
+	   public static void setCards(ArrayList<Card> cards) {
+	        Board.cards = cards;
 	   }
 }
