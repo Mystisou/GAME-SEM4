@@ -35,8 +35,7 @@ public class DoorCell extends Cell implements CanisterModifier{
 	public void setActivated(boolean activated) {
 		this.activated = activated;
 	}
-	
-	// still unsolved
+
 	public void modifyEnergy(Monster monster) {
       if(!this.isActivated()) {
 		if(monster.getRole() == this.getRole()) {
