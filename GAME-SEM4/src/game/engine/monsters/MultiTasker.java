@@ -3,7 +3,6 @@ import game.engine.Role;
 
 public class MultiTasker extends Monster {
 	
-	
     private int normalSpeedTurns;
     
     public MultiTasker(String name, String description, Role role, int energy) {
@@ -17,6 +16,5 @@ public class MultiTasker extends Monster {
 
     public void setNormalSpeedTurns(int normalSpeedTurns) {
         this.normalSpeedTurns = normalSpeedTurns;
-    }
-        
+    }     
 }
