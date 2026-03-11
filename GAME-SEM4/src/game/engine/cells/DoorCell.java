@@ -48,6 +48,7 @@ public class DoorCell extends Cell implements CanisterModifier{
 			//Board.setStationedMonsters(matching);
 			this.setActivated(true);
 		}
+		
 		else {
 		    if(!monster.isShielded()) {
 		    	ArrayList<Monster> matching = Board.getStationedMonsters();
