@@ -10,6 +10,10 @@ public class ContaminationSock extends TransportCell implements CanisterModifier
     }
     
     public void modifyEnergy(Monster monster) {
-    	
+    	monster.setPosition(monster.getPosition()-this.getEffect());
+    	if(!monster.isShielded())
+    		monster.setEnergy(monster.getEnergy()-100);
+    	else
+    		monster.setShielded(false);
     }
 }

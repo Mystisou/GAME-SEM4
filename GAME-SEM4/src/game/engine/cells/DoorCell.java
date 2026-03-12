@@ -36,28 +36,30 @@ public class DoorCell extends Cell implements CanisterModifier{
 	}
 
 	public void modifyEnergy(Monster monster) {
-      if(!this.isActivated()) {
-		if(monster.getRole() == this.getRole()) {
-		    ArrayList<Monster> matching = Board.getStationedMonsters();
-			for(int i = 0; i < matching.size(); i++) {
-				if(matching.get(i).getRole() == monster.getRole())
-			        matching.get(i).setEnergy(matching.get(i).getEnergy() + this.energy);
-			}
-			//Board.setStationedMonsters(matching);
-			this.setActivated(true);
-		}
-		
-		else {
-		    if(!monster.isShielded()) {
-		    	ArrayList<Monster> matching = Board.getStationedMonsters();
-			for(int i = 0; i < matching.size(); i++) {
-				if(matching.get(i).getRole() == monster.getRole())
-			        matching.get(i).setEnergy(matching.get(i).getEnergy() - this.energy);
-			}
-			//Board.setStationedMonsters(matching);
-			this.setActivated(true);
-			}
-		}
-	  }
-	}
+	      if(!this.isActivated()) {
+			if(monster.getRole() == this.getRole()) {
+			    ArrayList<Monster> matching = Board.getStationedMonsters();
+				for(int i = 0; i < matching.size(); i++) {
+					if(matching.get(i).getRole() == monster.getRole())
+				        matching.get(i).setEnergy(matching.get(i).getEnergy() + this.energy);
+				}
+				this.setActivated(true);
+			 }
+			else {
+			    if(!monster.isShielded()) {
+			    	ArrayList<Monster> matching = Board.getStationedMonsters();
+				  for(int i = 0; i < matching.size(); i++) {
+					if(matching.get(i).getRole() == monster.getRole())
+				        matching.get(i).setEnergy(matching.get(i).getEnergy() - this.energy);
+				  }
+				  this.setActivated(true);
+			    }
+			    else 
+			    	monster.setShielded(false);
+		    }
+		  } // end of basic condition(still not activated)
+	    } // end of method
 }
+
+
+
