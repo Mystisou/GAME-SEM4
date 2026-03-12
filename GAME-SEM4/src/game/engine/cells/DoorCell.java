@@ -1,5 +1,12 @@
 package game.engine.cells;
+<<<<<<< Updated upstream
 import game.engine.Role;
+=======
+
+import game.engine.Role;
+import game.engine.interfaces.CanisterModifier;
+import game.engine.monsters.Monster;
+>>>>>>> Stashed changes
 
 public class DoorCell extends Cell{
 	
@@ -29,4 +36,11 @@ public class DoorCell extends Cell{
 	public void setActivated(boolean activated) {
 		this.activated = activated;
 	}
+<<<<<<< Updated upstream
+=======
+
+	public void modifyEnergy(Monster monster) {
+
+	}
+>>>>>>> Stashed changes
 }
