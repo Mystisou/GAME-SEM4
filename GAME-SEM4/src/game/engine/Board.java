@@ -1,48 +1,45 @@
-package game.engine;
+package src.game.engine;
 
+import java.util.ArrayList;
+
+import game.engine.cards.Card;
+import game.engine.cells.*;
 import game.engine.monsters.Monster;
-import game.engine.cells.Cell;
-import game.engine.cards.Card; 
-import java.util.ArrayList;  // 34an el arraylist
 
 public class Board {
+	private Cell[][] boardCells;
+	private static ArrayList<Monster> stationedMonsters; 
+	private static ArrayList<Card> originalCards;
+	public static ArrayList<Card> cards;
 	
-	 private final Cell [][] boardCells ;
-	 private static ArrayList<Monster> stationedMonsters;  // read w write 
-	 private static ArrayList<Card> originalCards ;// can't do final to be able to assign in constructor
-	 public static ArrayList<Card> cards ;                // read w write brdo
-	 
-	 public Board(ArrayList<Card> readCards){
-		 boardCells = new Cell[Constants.BOARD_ROWS][Constants.BOARD_COLS];
-		 stationedMonsters = new ArrayList<>();
-		 cards =  new ArrayList<>();
-		 originalCards = readCards ;
-	 }
-	 
-	  public Cell[][] getBoardCells() {
-	        return boardCells;
-	  }
-	  
-	  
-	  public static ArrayList<Monster> getStationedMonsters() {
-	        return stationedMonsters;
-	  }
+	public Board(ArrayList<Card> readCards) {
+		this.boardCells = new Cell[Constants.BOARD_ROWS][Constants.BOARD_COLS];
+		stationedMonsters = new ArrayList<Monster>();
+		originalCards = readCards;
+		cards = new ArrayList<Card>();
+	}
+	
+	public Cell[][] getBoardCells() {
+		return boardCells;
+	}
+	
+	public static ArrayList<Monster> getStationedMonsters() {
+		return stationedMonsters;
+	}
+	
+	public static void setStationedMonsters(ArrayList<Monster> stationedMonsters) {
+		Board.stationedMonsters = stationedMonsters;
+	}
 
-	  public static void setStationedMonsters(ArrayList<Monster> monsters) {
-	        stationedMonsters = monsters;
-	  }
-
-	  
-	  public static ArrayList<Card> getOriginalCards() {
-	        return originalCards;
-	  }
-
-	  
-	  public static ArrayList<Card> getCards() {
-	        return cards;
-	  }
-
-	   public static void setCards(ArrayList<Card> newCards) {
-	        cards = newCards;
-	   }
+	public static ArrayList<Card> getOriginalCards() {
+		return originalCards;
+	}
+	
+	public static ArrayList<Card> getCards() {
+		return cards;
+	}
+	
+	public static void setCards(ArrayList<Card> cards) {
+		Board.cards = cards;
+	}
 }

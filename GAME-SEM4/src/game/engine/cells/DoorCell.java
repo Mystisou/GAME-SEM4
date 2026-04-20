@@ -1,14 +1,11 @@
 package game.engine.cells;
-import java.util.Iterator;
 
 import game.engine.Role;
 import game.engine.interfaces.CanisterModifier;
-import game.engine.monsters.Monster;
-import game.engine.Board;
-public class DoorCell extends Cell implements CanisterModifier{
-	
-	private final Role role;
-	private final int energy;
+
+public class DoorCell extends Cell implements CanisterModifier {
+	private Role role;
+	private int energy;
 	private boolean activated;
 	
 	public DoorCell(String name, Role role, int energy) {
@@ -29,30 +26,9 @@ public class DoorCell extends Cell implements CanisterModifier{
 	public boolean isActivated() {
 		return activated;
 	}
-	
-	public void setActivated(boolean activated) {
-		this.activated = activated;
+
+	public void setActivated(boolean isActivated) {
+		this.activated = isActivated;
 	}
-	
-	// still unsolved
-	public void modifyEnergy(Monster monster) {
-      /*if(!this.isActivated()) {
-		if(monster.getRole()==this.getRole()) {
-			for(int i=0;i<Board.stationedMonsters.size();i++) {
-				if(Board.stationedMonsters.get(i).getRole()==this.getRole())
-			        monster.setEnergy(monster.getEnergy()+this.energy);
-			}
-			this.setActivated(true);
-		}
-		else {
-		    if(!monster.isShielded()) {
-		    	for(int i=0;i<Board.stationedMonsters.size();i++) {
-					if(Board.stationedMonsters.get(i).getRole()!=this.getRole())
-				        monster.setEnergy(monster.getEnergy()-this.energy);
-				}
-			   this.setActivated(true);
-			}
-		}
-	  }*/
-	}
+
 }
